@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Frontend Mentor | Clock App</title>
+	</head>
+	<body class="day">
+		<main>
+			<section class="first-section">
+				<div class="container">
+					<blockquote class="quote">
+						<p id="quote">
+							“The science of operations, as derived from
+							mathematics more especially, is a science of itself,
+							and has its own abstract truth and value.”
+						</p>
+						<cite id="quote-author" class="quote__author"
+							>Ada Lovelace</cite
+						>
+						<div id="quote-button" class="quote__button">
+							<i class="icon icon-refresh"></i>
+						</div>
+					</blockquote>
+
+					<div class="d-flex">
+						<div class="clock">
+							<h4 class="clock__headline">
+								<i class="icon"></i>
+								<span id="greeting">Good Morning</span
+								><span>, it's currently</span>
+							</h4>
+							<h1 class="clock__time">
+								<span id="clock">XX:XX</span>
+								<small id="abbr">XXX</small>
+							</h1>
+							<h3 class="clock__location">
+								In <span id="city">XX</span>,
+								<span id="country">XX</span>
+							</h3>
+						</div>
+
+						<button
+							id="more-less"
+							class="button"
+							data-more="more"
+							data-less="less"
+						>
+							<span>More</span> <i class="icon icon-up"></i>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="expand">
+				<div class="container grid">
+					<div class="grid-column">
+						<div>
+							<h6>Current Timezone</h6>
+							<h2 id="timezone">Current/Timezone</h2>
+						</div>
+						<div>
+							<h6>Day of the year</h6>
+							<h2 id="dayOfYear">0</h2>
+						</div>
+					</div>
+					<div class="grid-column">
+						<div>
+							<h6>Day of the week</h6>
+							<h2 id="dayOfWeek">0</h2>
+						</div>
+						<div>
+							<h6>Week Number</h6>
+							<h2 id="weekNumber">0</h2>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- CDN example (unpkg) -->
+		<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+		<script src="script-display-time.js"></script>
+		<script src="script-display-information.js"></script>
+		<script src="script-random-quote.js"></script>
+		<script>
+			const button = document.getElementById("more-less");
+
+			function toggleText() {
+				const buttonText = button.children[0];
+				const buttonTextHTML = buttonText.innerText.toLowerCase();
+
+				if (buttonText.innerHTML === "More") {
+					buttonText.innerHTML = button.dataset.less;
+				} else {
+					buttonText.innerHTML = button.dataset.more;
+				}
+			}
+
+			button.onclick = () => {
+				document.body.classList.toggle("translate");
+				toggleText();
+			};
+		</script>
+	</body>
+</html>
