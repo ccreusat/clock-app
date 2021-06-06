@@ -2,9 +2,10 @@
 	"use strict";
 
 	let isWaiting = true;
+	const html = document.getElementsByTagName("html")[0];
 
 	if (isWaiting) {
-		console.log("Loading...");
+		html.classList.add("is-loading");
 	}
 
 	async function fetchTimeZone() {
@@ -26,7 +27,10 @@
 			})
 			.then(() => {
 				isWaiting = false;
-				console.log("not loading...");
+				html.classList.add("not-loading");
+				html.addEventListener("transitionend", () => {
+					html.classList.remove("is-loading");
+				});
 			});
 	}
 

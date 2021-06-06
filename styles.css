@@ -264,6 +264,22 @@ section {
 	transform: rotate(0);
 }
 
+/* SHOW EFFECT */
+.quote,
+.d-flex {
+	opacity: 0;
+	transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.not-loading .quote,
+.not-loading .d-flex {
+	opacity: 1;
+}
+
+.not-loading .d-flex {
+	transition-delay: 0.4s;
+}
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 767px) {
