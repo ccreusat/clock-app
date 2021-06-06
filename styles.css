@@ -14,6 +14,11 @@
 	--color-dark: hsl(0, 0%, 19%);
 	--color-white: hsl(0, 0%, 100%);
 	--color-hover: hsl(0, 0%, 60%);
+
+	/* alpha */
+	--color-white-alpha: hsla(0, 0%, 100%, 75%);
+	--color-black-50: hsla(0, 0%, 0%, 50%);
+	--color-black-75: hsla(0, 0%, 0%, 75%);
 }
 
 :root::-webkit-scrollbar {
@@ -137,7 +142,7 @@ h6 {
 	border: 0;
 	width: 115px;
 	height: 39px;
-	color: hsla(0, 0%, 0%, 50%);
+	color: var(--color-black-50);
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	font-size: 0.66rem;
@@ -221,7 +226,7 @@ section {
 }
 
 .day .expand {
-	background-color: hsla(0, 0%, 100%, 75%);
+	background-color: var(--color-white-alpha);
 }
 
 .day .clock .icon {
@@ -242,7 +247,7 @@ section {
 }
 
 .night .expand {
-	background-color: hsla(0, 0%, 0%, 75%);
+	background-color: var(--color-black-75);
 }
 
 /* TRANSLATE EFFECT */
@@ -252,12 +257,6 @@ section {
 }
 .translate .expand {
 	display: block;
-}
-
-@media only screen and (min-width: 768px) {
-	.translate {
-		transform: translateY(-400px);
-	}
 }
 
 .translate .icon-up {
@@ -299,6 +298,9 @@ section {
 }
 
 @media only screen and (min-width: 768px) {
+	.translate {
+		transform: translateY(-400px);
+	}
 	h1 {
 		font-size: 9.72rem;
 		line-height: 175px;

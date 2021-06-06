@@ -9,7 +9,7 @@
 	}
 
 	async function fetchTimeZone() {
-		const worldTimeURL = "http://worldtimeapi.org/api/ip";
+		const worldTimeURL = "https://worldtimeapi.org/api/ip";
 		await fetch(worldTimeURL)
 			.then(response => response.json())
 			.then(data => {
