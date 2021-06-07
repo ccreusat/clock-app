@@ -37,10 +37,17 @@
 				let randomQuote = quotes[randomNumber];
 
 				const quoteContainer = document.getElementById("quote");
+				const quoteText = document.getElementById("quote-text");
 				const quoteAuthor = document.getElementById("quote-author");
 
-				quoteContainer.innerHTML = randomQuote.text;
+				quoteContainer.classList.add("quote-transition");
+
+				quoteText.innerHTML = randomQuote.text;
 				quoteAuthor.innerHTML = randomQuote.author.name;
+
+				quoteContainer.addEventListener("animationend", () => {
+					quoteContainer.classList.remove("quote-transition");
+				});
 			});
 	}
 

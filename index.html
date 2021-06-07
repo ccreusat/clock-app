@@ -15,15 +15,15 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="styles.min.css" />
+		<link rel="stylesheet" href="styles.css" />
 		<title>Frontend Mentor | Clock App</title>
 	</head>
 	<body class="day">
 		<main>
 			<section class="first-section">
 				<div class="container">
-					<blockquote class="quote">
-						<p id="quote">
+					<blockquote id="quote" class="quote">
+						<p id="quote-text">
 							“The science of operations, as derived from
 							mathematics more especially, is a science of itself,
 							and has its own abstract truth and value.”
@@ -45,7 +45,7 @@
 							</h4>
 							<h1 class="clock__time">
 								<span id="clock">XX:XX</span>
-								<small id="abbr">XXX</small>
+								<!-- <small id="abbr">XXX</small> -->
 							</h1>
 							<h3 class="clock__location">
 								In <span id="city">XX</span>,
@@ -92,9 +92,9 @@
 
 		<!-- CDN example (unpkg) -->
 		<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-		<script src="script-display-time.min.js"></script>
-		<script src="script-display-information.min.js"></script>
-		<script src="script-random-quote.min.js"></script>
+		<script src="script-display-time.js"></script>
+		<script src="script-display-information.js"></script>
+		<script src="script-random-quote.js"></script>
 		<script>
 			const button = document.getElementById("more-less");
 

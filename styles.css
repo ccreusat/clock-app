@@ -161,6 +161,7 @@ h6 {
 	position: relative;
 	font-size: 0.66rem;
 	line-height: 22px;
+	transition: animation 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .quote p {
@@ -178,6 +179,19 @@ h6 {
 	margin-top: 0.83rem;
 	font-style: normal;
 	font-weight: 700;
+}
+
+.quote-transition {
+	animation: quoteTransition 0.5s ease-in-out;
+}
+
+@keyframes quoteTransition {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 /* MAIN ELEMENTS */
