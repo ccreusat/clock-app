@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Solution page](https://your-solution-url.com)
+-   Solution URL: [Solution page](https://www.frontendmentor.io/solutions/clock-app-with-javascript-dayjs-own-backend-quotes-api-WYww7nH8A)
 -   Live Site URL: [Live site](https://ccreusat-clock-app.vercel.app)
 
 ## My process
